@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample HTML Form</title>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+
+    <!-- The <form> tag wraps all input controls -->
+    <!-- 'action' specifies where data is sent; 'method' defines the HTTP transmission method -->
+    <form action="/submit-form-endpoint" method="POST">
+
+        <!-- 1. Text Input (Single-line) -->
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <br>
+
+        <!-- 2. Email Input -->
+        <div>
+            <label for="user-email">Email Address:</label>
+            <input type="email" id="user-email" name="email" placeholder="name@example.com" required>
+        </div>
+        <br>
+
+        <!-- 3. Password Input -->
+        <div>
+            <label for="user-password">Password:</label>
+            <input type="password" id="user-password" name="password" required>
+        </div>
+        <br>
+
+        <!-- 4. Radio Buttons (Select only one option from a group) -->
+        <div>
+            <label>Gender:</label>
+            <input type="radio" id="gender-male" name="gender" value="male">
+            <label for="gender-male">Male</label>
+            
+            <input type="radio" id="gender-female" name="gender" value="female">
+            <label for="gender-female">Female</label>
+        </div>
+        <br>
+
+        <!-- 5. Dropdown Selection Menu -->
+        <div>
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">-- Please choose an option --</option>
+                <option value="usa">United States</option>
+                <option value="can">Canada</option>
+                <option value="uk">United Kingdom</option>
+            </select>
+        </div>
+        <br>
+
+        <!-- 6. Checkbox (Select zero, one, or multiple options) -->
+        <div>
+            <input type="checkbox" id="subscribe" name="newsletter" value="yes" checked>
+            <label for="subscribe">Subscribe to weekly newsletter</label>
+        </div>
+        <br>
+
+        <!-- 7. Textarea (Multi-line text input) -->
+        <div>
+            <label for="comments">Additional Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Write your message here..."></textarea>
+        </div>
+        <br>
+
+        <!-- 8. Submit Button -->
+        <div>
+            <button type="submit">Submit Registration</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
